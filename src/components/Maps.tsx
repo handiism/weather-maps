@@ -1,0 +1,41 @@
+import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
+
+const Maps = ({
+  center,
+  apiKey,
+}: {
+  center: google.maps.LatLngLiteral;
+  apiKey: string;
+}) => {
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: apiKey,
+  });
+
+  return (
+    <div>
+      {isLoaded ? (
+        <GoogleMap
+          id="map"
+          mapContainerStyle={{
+            width: "100vw",
+            height: "100vh",
+            position: "absolute",
+            zIndex: 0,
+          }}
+          center={center}
+          options={{
+            disableDefaultUI: true,
+            scrollwheel: false,
+          }}
+          zoom={15}
+        >
+          <Marker position={center} />
+        </GoogleMap>
+      ) : (
+        <></>
+      )}
+    </div>
+  );
+};
+
+export default Maps;

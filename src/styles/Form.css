@@ -1,0 +1,30 @@
+.Input {
+  width: 50vw;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 1.25em;
+  border-radius: 2px;
+}
+
+.Button {
+  font-family: inherit;
+  cursor: pointer;
+  width: auto;
+  align-items: center;
+  color: #fff;
+  background: #7f8ff4;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  border: none;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+
+.Form {
+  display: flex;
+  justify-content: center;
+}

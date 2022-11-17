@@ -1,0 +1,45 @@
+.Weather-container {
+  vertical-align: top;
+  max-width: 500px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.Top-content {
+  justify-content: space-between;
+  margin-top: 2em;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.Mid-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  align-items: center;
+}
+
+.Mid-content-temp {
+  font-size: 72px;
+}
+
+.Mid-content-temp .Temp-icon {
+  font-size: 30px;
+  vertical-align: top;
+  line-height: 74px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.Left {
+  display: flex;
+  align-items: center;
+}
+
+.Right {
+  font-size: 18px;
+  text-align: right;
+  text-transform: capitalize;
+}
