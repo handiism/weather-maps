@@ -5,6 +5,7 @@ const Weather = ({ data }: { data: WeatherData }) => {
   return (
     <div className="Weather-container">
       <div className="Top-content">
+        <p className="font-medium">{data.name}</p>
         <p className="font-medium">
           {`${data.date.toLocaleString("en", {
             weekday: "long",
@@ -12,6 +13,8 @@ const Weather = ({ data }: { data: WeatherData }) => {
             day: "2-digit",
           })} ${data.date.toLocaleString("en", {
             month: "long",
+          })} ${data.date.toLocaleString("en", {
+            year: "numeric",
           })}`}
         </p>
       </div>
