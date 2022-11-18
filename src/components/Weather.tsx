@@ -5,7 +5,9 @@ const Weather = ({ data }: { data: WeatherData }) => {
   return (
     <div className="Weather-container">
       <div className="Top-content">
-        <p className="font-medium">{data.name}</p>
+        <p className="font-medium">
+          {data.name === "" ? "Your Location" : data.name}
+        </p>
         <p className="font-medium">
           {`${data.date.toLocaleString("en", {
             weekday: "long",

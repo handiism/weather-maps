@@ -1,4 +1,4 @@
-import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
+import { useJsApiLoader, GoogleMap } from "@react-google-maps/api";
 
 const Maps = ({
   center,
@@ -28,9 +28,7 @@ const Maps = ({
             scrollwheel: false,
           }}
           zoom={15}
-        >
-          <Marker position={center} />
-        </GoogleMap>
+        ></GoogleMap>
       ) : (
         <></>
       )}

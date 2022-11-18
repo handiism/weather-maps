@@ -8,6 +8,7 @@ import Weather from "./components/Weather";
 import "./App.css";
 import "./styles/Style.css";
 import "./styles/Form.css";
+import Snackbar from "@mui/material/Snackbar";
 
 const weatherApiKey =
   process.env.REACT_APP_WEATHER_API_KEY || "0a80fb875c89d2a83e4e488fee2fcd64";
@@ -36,11 +37,26 @@ function App() {
     wind: 0,
   });
 
+  const [visibility, setVisibility] = useState<{
+    open: boolean;
+    message: string;
+  }>({
+    open: false,
+    message: "",
+  });
+
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     document.title = "Weather Maps";
   }, []);
+
+  const handleClose = () => {
+    setVisibility({
+      open: false,
+      message: "",
+    });
+  };
 
   const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -68,7 +84,12 @@ function App() {
           name: String(res.data.candidates[0].name),
         });
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        setVisibility({
+          message: "Place Not Found",
+          open: true,
+        });
+      });
   };
 
   useEffect(() => {
@@ -94,25 +115,63 @@ function App() {
           wind: Number(res.data.wind.speed),
         });
       })
-      .catch((e) => console.log(e));
+      .catch((e) =>
+        setVisibility({
+          message: "Weather Not Found",
+          open: true,
+        })
+      );
   }, [position]);
 
   useEffect(() => {
     if (isGeolocationAvailable) {
       if (isGeolocationEnabled) {
         if (coords) {
+          setVisibility({
+            open: true,
+            message: "Successfully Obtained Your Current Location",
+          });
+
           setPosition({
             lat: coords.latitude,
             lng: coords.longitude,
             name: "Your Location",
           });
+          return;
         }
+
+        setVisibility({
+          open: true,
+          message: "Failed To Obtain Your Current Location",
+        });
+        return;
       }
+
+      setVisibility({
+        message: "Please Allow Location Service",
+        open: true,
+      });
+      return;
     }
+
+    setVisibility({
+      message: "Your Device Does Not Support Location Service",
+      open: true,
+    });
   }, [coords, isGeolocationAvailable, isGeolocationEnabled]);
 
   return (
     <div className="App">
+      <Snackbar
+        anchorOrigin={{
+          horizontal: "center",
+          vertical: "bottom",
+        }}
+        autoHideDuration={2000}
+        open={visibility.open}
+        onClose={handleClose}
+        message={visibility.message}
+      />
       <div className="Weather">
         <div className="Center">
           <h1 className="text-white font-medium text-6xl">Weather Maps</h1>
