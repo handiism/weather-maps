@@ -179,7 +179,7 @@ function App() {
             message: "Successfully Obtained Your Current Location",
           });
 
-          //
+          // Mengubah posisi berdasarkan lokasi gps yang didapatkan
           setPosition({
             lat: coords.latitude,
             lng: coords.longitude,
