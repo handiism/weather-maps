@@ -66,12 +66,14 @@ function App() {
       return;
     }
 
-    const getPositionUri = `http://34.101.216.127:8080/find?${stringify({
-      input: location,
-      inputtype: "textquery",
-      fields: "formatted_address,name,geometry",
-      key: mapsApiKey,
-    })}`;
+    const getPositionUri = `https://gomaps-6xnl6qe7oa-de.a.run.app/find?${stringify(
+      {
+        input: location,
+        inputtype: "textquery",
+        fields: "formatted_address,name,geometry",
+        key: mapsApiKey,
+      }
+    )}`;
 
     axios
       .get(getPositionUri)
