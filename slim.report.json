@@ -1,0 +1,355 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.39.1|537c77323f2e9a3d6771aa0ea73a047017774d16|2022-11-13_03:27:40AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Pop!_OS",
+    "version": "22.04",
+    "display_name": "Pop!_OS 22.04 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "weather-maps.fat:1.0.0",
+  "system": {
+    "type": "",
+    "release": "",
+    "distro": {
+      "name": "",
+      "version": "",
+      "display_name": ""
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:7bd987c41286c388c1f4c172f8b1e2688133457bcfdf0f719bf639b066ef0614",
+      "tags": [
+        "1.0.0"
+      ],
+      "names": [
+        "weather-maps.fat:1.0.0"
+      ]
+    },
+    "size": 143899716,
+    "size_human": "144 MB",
+    "create_time": "2022-12-23T08:42:20Z",
+    "docker_version": "20.10.22",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "80/tcp"
+    ],
+    "os": "linux",
+    "labels": {
+      "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+    },
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "NGINX_VERSION=1.23.3",
+      "NJS_VERSION=0.7.9",
+      "PKG_RELEASE=1~bullseye"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 12879549,
+  "minified_image_size_human": "13 MB",
+  "minified_image": "weather-maps:1.0.0",
+  "minified_image_has_data": true,
+  "minified_by": 11.172729417776974,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/7bd987c41286c388c1f4c172f8b1e2688133457bcfdf0f719bf639b066ef0614/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "weather-maps.fat-seccomp.json",
+  "apparmor_profile_name": "weather-maps.fat-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": false,
+      "id": "sha256:1403e55ab369cd1c8039c34e6b4d47ca40bbde39c371254c7cba14756f472f52",
+      "full_name": "nginx:latest",
+      "repo_name": "nginx",
+      "version_tag": "latest",
+      "raw_tags": [
+        "nginx:latest"
+      ],
+      "create_time": "2022-12-21T11:28:36Z",
+      "new_size": 141812353,
+      "new_size_human": "142 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2022-12-21T01:20:32Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 80488633,
+          "size_human": "80 MB",
+          "params": "file:73e68ae6852c9afbb2989dc9c5b7c6668843f454b1bdcfb48658bfbc6c4af69e in /",
+          "command_snippet": "ADD file:73e68ae6852c9afbb2989dc9c5b7c666884...",
+          "command_all": "ADD file:73e68ae6852c9afbb2989dc9c5b7c6668843f454b1bdcfb48658bfbc6c4af69e /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "CMD",
+          "time": "2022-12-21T01:20:33Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"bash\"]\n",
+          "command_snippet": "CMD [\"bash\"]\n",
+          "command_all": "CMD [\"bash\"]\n"
+        },
+        {
+          "type": "LABEL",
+          "time": "2022-12-21T11:28:16Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>",
+          "command_snippet": "LABEL maintainer=NGINX Docker Maintainers <d...",
+          "command_all": "LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>"
+        },
+        {
+          "type": "ENV",
+          "time": "2022-12-21T11:28:16Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "NGINX_VERSION=1.23.3",
+          "command_snippet": "ENV NGINX_VERSION=1.23.3",
+          "command_all": "ENV NGINX_VERSION=1.23.3"
+        },
+        {
+          "type": "ENV",
+          "time": "2022-12-21T11:28:16Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "NJS_VERSION=0.7.9",
+          "command_snippet": "ENV NJS_VERSION=0.7.9",
+          "command_all": "ENV NJS_VERSION=0.7.9"
+        },
+        {
+          "type": "ENV",
+          "time": "2022-12-21T11:28:16Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PKG_RELEASE=1~bullseye",
+          "command_snippet": "ENV PKG_RELEASE=1~bullseye",
+          "command_all": "ENV PKG_RELEASE=1~bullseye"
+        },
+        {
+          "type": "RUN",
+          "time": "2022-12-21T11:28:34Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 61314087,
+          "size_human": "61 MB",
+          "command_snippet": "RUN set -x && \\\n\taddgroup --system --gid 101...",
+          "command_all": "RUN set -x && \\\n\taddgroup --system --gid 101 nginx && \\\n\tadduser --system --disabled-login --ingroup nginx --no-create-home --home /nonexistent --gecos \"nginx user\" --shell /bin/false --uid 101 nginx && \\\n\tapt-get update && \\\n\tapt-get install --no-install-recommends --no-install-suggests -y gnupg1 ca-certificates && \\\n\tNGINX_GPGKEY=573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62;     found='';     for server in         hkp://keyserver.ubuntu.com:80         pgp.mit.edu     ; do         echo \"Fetching GPG key $NGINX_GPGKEY from $server\";         apt-key adv --keyserver \"$server\" --keyserver-options timeout=10 --recv-keys \"$NGINX_GPGKEY\" && \\\n\tfound=yes && \\\n\tbreak;     done;     test -z \"$found\" && \\\n\techo >&2 \"error: failed to fetch GPG key $NGINX_GPGKEY\" && \\\n\texit 1;     apt-get remove --purge --auto-remove -y gnupg1 && \\\n\trm -rf /var/lib/apt/lists/* && \\\n\tdpkgArch=\"$(dpkg --print-architecture)\" && \\\n\tnginxPackages=\"         nginx=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}+${NJS_VERSION}-${PKG_RELEASE}     \" && \\\n\tcase \"$dpkgArch\" in         amd64|arm64)             echo \"deb https://nginx.org/packages/mainline/debian/ bullseye nginx\" >> /etc/apt/sources.list.d/nginx.list && \\\n\tapt-get update             ;;         *)             echo \"deb-src https://nginx.org/packages/mainline/debian/ bullseye nginx\" >> /etc/apt/sources.list.d/nginx.list && \\\n\ttempDir=\"$(mktemp -d)\" && \\\n\tchmod 777 \"$tempDir\" && \\\n\tsavedAptMark=\"$(apt-mark showmanual)\" && \\\n\tapt-get update && \\\n\tapt-get build-dep -y $nginxPackages && \\\n\t(                 cd \"$tempDir\" && \\\n\tDEB_BUILD_OPTIONS=\"nocheck parallel=$(nproc)\"                     apt-get source --compile $nginxPackages             ) && \\\n\tapt-mark showmanual | xargs apt-mark auto > /dev/null && \\\n\t{ [ -z \"$savedAptMark\" ] || apt-mark manual $savedAptMark; } && \\\n\tls -lAFh \"$tempDir\" && \\\n\t( cd \"$tempDir\" && \\\n\tdpkg-scanpackages . > Packages ) && \\\n\tgrep '^Package: ' \"$tempDir/Packages\" && \\\n\techo \"deb [ trusted=yes ] file://$tempDir ./\" > /etc/apt/sources.list.d/temp.list && \\\n\tapt-get -o Acquire::GzipIndexes=false update             ;;     esac && \\\n\tapt-get install --no-install-recommends --no-install-suggests -y                         $nginxPackages                         gettext-base                         curl && \\\n\tapt-get remove --purge --auto-remove -y && \\\n\trm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/nginx.list && \\\n\tif [ -n \"$tempDir\" ]; then         apt-get purge -y --auto-remove && \\\n\trm -rf \"$tempDir\" /etc/apt/sources.list.d/temp.list;     fi && \\\n\tln -sf /dev/stdout /var/log/nginx/access.log && \\\n\tln -sf /dev/stderr /var/log/nginx/error.log && \\\n\tmkdir /docker-entrypoint.d",
+          "system_commands": [
+            "set -x",
+            "addgroup --system --gid 101 nginx",
+            "adduser --system --disabled-login --ingroup nginx --no-create-home --home /nonexistent --gecos \"nginx user\" --shell /bin/false --uid 101 nginx",
+            "apt-get update",
+            "apt-get install --no-install-recommends --no-install-suggests -y gnupg1 ca-certificates",
+            "NGINX_GPGKEY=573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62;     found='';     for server in         hkp://keyserver.ubuntu.com:80         pgp.mit.edu     ; do         echo \"Fetching GPG key $NGINX_GPGKEY from $server\";         apt-key adv --keyserver \"$server\" --keyserver-options timeout=10 --recv-keys \"$NGINX_GPGKEY\"",
+            "found=yes",
+            "break;     done;     test -z \"$found\"",
+            "echo >&2 \"error: failed to fetch GPG key $NGINX_GPGKEY\"",
+            "exit 1;     apt-get remove --purge --auto-remove -y gnupg1",
+            "rm -rf /var/lib/apt/lists/*",
+            "dpkgArch=\"$(dpkg --print-architecture)\"",
+            "nginxPackages=\"         nginx=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}+${NJS_VERSION}-${PKG_RELEASE}     \"",
+            "case \"$dpkgArch\" in         amd64|arm64)             echo \"deb https://nginx.org/packages/mainline/debian/ bullseye nginx\" >> /etc/apt/sources.list.d/nginx.list",
+            "apt-get update             ;;         *)             echo \"deb-src https://nginx.org/packages/mainline/debian/ bullseye nginx\" >> /etc/apt/sources.list.d/nginx.list",
+            "tempDir=\"$(mktemp -d)\"",
+            "chmod 777 \"$tempDir\"",
+            "savedAptMark=\"$(apt-mark showmanual)\"",
+            "apt-get update",
+            "apt-get build-dep -y $nginxPackages",
+            "(                 cd \"$tempDir\"",
+            "DEB_BUILD_OPTIONS=\"nocheck parallel=$(nproc)\"                     apt-get source --compile $nginxPackages             )",
+            "apt-mark showmanual | xargs apt-mark auto > /dev/null",
+            "{ [ -z \"$savedAptMark\" ] || apt-mark manual $savedAptMark; }",
+            "ls -lAFh \"$tempDir\"",
+            "( cd \"$tempDir\"",
+            "dpkg-scanpackages . > Packages )",
+            "grep '^Package: ' \"$tempDir/Packages\"",
+            "echo \"deb [ trusted=yes ] file://$tempDir ./\" > /etc/apt/sources.list.d/temp.list",
+            "apt-get -o Acquire::GzipIndexes=false update             ;;     esac",
+            "apt-get install --no-install-recommends --no-install-suggests -y                         $nginxPackages                         gettext-base                         curl",
+            "apt-get remove --purge --auto-remove -y",
+            "rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/nginx.list",
+            "if [ -n \"$tempDir\" ]; then         apt-get purge -y --auto-remove",
+            "rm -rf \"$tempDir\" /etc/apt/sources.list.d/temp.list;     fi",
+            "ln -sf /dev/stdout /var/log/nginx/access.log",
+            "ln -sf /dev/stderr /var/log/nginx/error.log",
+            "mkdir /docker-entrypoint.d"
+          ]
+        },
+        {
+          "type": "COPY",
+          "time": "2022-12-21T11:28:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 1616,
+          "size_human": "1.6 kB",
+          "params": "file:7b307b62e82255f040c9812421a30090bf9abf3685f27b02d77fcca99f997911 in /",
+          "command_snippet": "COPY file:7b307b62e82255f040c9812421a30090bf...",
+          "command_all": "COPY file:7b307b62e82255f040c9812421a30090bf9abf3685f27b02d77fcca99f997911 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "COPY",
+          "time": "2022-12-21T11:28:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 2123,
+          "size_human": "2.1 kB",
+          "params": "file:5c18272734349488bd0c94ec8d382c872c1a0a435cca13bd4671353d6021d2cb in /docker-entrypoint.d",
+          "command_snippet": "COPY file:5c18272734349488bd0c94ec8d382c872c...",
+          "command_all": "COPY file:5c18272734349488bd0c94ec8d382c872c1a0a435cca13bd4671353d6021d2cb /docker-entrypoint.d",
+          "target": "/docker-entrypoint.d",
+          "source_type": "file"
+        },
+        {
+          "type": "COPY",
+          "time": "2022-12-21T11:28:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 1273,
+          "size_human": "1.3 kB",
+          "params": "file:abbcbf84dc17ee4454b6b2e3cf914be88e02cf84d344ec45a5b31235379d722a in /docker-entrypoint.d",
+          "command_snippet": "COPY file:abbcbf84dc17ee4454b6b2e3cf914be88e...",
+          "command_all": "COPY file:abbcbf84dc17ee4454b6b2e3cf914be88e02cf84d344ec45a5b31235379d722a /docker-entrypoint.d",
+          "target": "/docker-entrypoint.d",
+          "source_type": "file"
+        },
+        {
+          "type": "COPY",
+          "time": "2022-12-21T11:28:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4621,
+          "size_human": "4.6 kB",
+          "params": "file:e57eef017a414ca793499729d80a7b9075790c9a804f930f1417e56d506970cf in /docker-entrypoint.d",
+          "command_snippet": "COPY file:e57eef017a414ca793499729d80a7b9075...",
+          "command_all": "COPY file:e57eef017a414ca793499729d80a7b9075790c9a804f930f1417e56d506970cf /docker-entrypoint.d",
+          "target": "/docker-entrypoint.d",
+          "source_type": "file"
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2022-12-21T11:28:35Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/docker-entrypoint.sh\"]\n",
+          "command_snippet": "ENTRYPOINT [\"/docker-entrypoint.sh\"]\n",
+          "command_all": "ENTRYPOINT [\"/docker-entrypoint.sh\"]\n"
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2022-12-21T11:28:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "80",
+          "command_snippet": "EXPOSE 80",
+          "command_all": "EXPOSE 80"
+        },
+        {
+          "type": "STOPSIGNAL",
+          "time": "2022-12-21T11:28:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "SIGQUIT",
+          "command_snippet": "STOPSIGNAL SIGQUIT",
+          "command_all": "STOPSIGNAL SIGQUIT"
+        },
+        {
+          "type": "CMD",
+          "time": "2022-12-21T11:28:36Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"nginx\",\"-g\",\"daemon off;\"]\n",
+          "command_snippet": "CMD [\"nginx\",\"-g\",\"daemon off;\"]\n",
+          "command_all": "CMD [\"nginx\",\"-g\",\"daemon off;\"]\n",
+          "raw_tags": [
+            "nginx:latest"
+          ]
+        }
+      ]
+    },
+    {
+      "is_top_image": true,
+      "id": "sha256:7bd987c41286c388c1f4c172f8b1e2688133457bcfdf0f719bf639b066ef0614",
+      "full_name": "weather-maps.fat:1.0.0",
+      "repo_name": "weather-maps.fat",
+      "version_tag": "1.0.0",
+      "raw_tags": [
+        "weather-maps.fat:1.0.0"
+      ],
+      "create_time": "2022-12-23T08:42:20Z",
+      "new_size": 2087363,
+      "new_size_human": "2.1 MB",
+      "base_image_id": "sha256:1403e55ab369cd1c8039c34e6b4d47ca40bbde39c371254c7cba14756f472f52",
+      "instructions": [
+        {
+          "type": "RUN",
+          "time": "2022-12-23T07:11:34Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:1f6ae6428ae4a066198a0abfd0903e66ee1bcdd148eb4dc713fad159d2eb4e35",
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN rm -r /usr/share/nginx/html/*",
+          "command_all": "RUN rm -r /usr/share/nginx/html/*",
+          "system_commands": [
+            "rm -r /usr/share/nginx/html/*"
+          ]
+        },
+        {
+          "type": "COPY",
+          "time": "2022-12-23T08:42:20Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 2087363,
+          "size_human": "2.1 MB",
+          "params": "dir:bd658f07a587a4d28fff1bdff829f0c863027592271c8f11978d00025be874da in /usr/share/nginx/html",
+          "command_snippet": "COPY dir:bd658f07a587a4d28fff1bdff829f0c8630...",
+          "command_all": "COPY dir:bd658f07a587a4d28fff1bdff829f0c863027592271c8f11978d00025be874da /usr/share/nginx/html",
+          "raw_tags": [
+            "weather-maps.fat:1.0.0"
+          ],
+          "target": "/usr/share/nginx/html",
+          "source_type": "dir"
+        }
+      ]
+    }
+  ]
+}

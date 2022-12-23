@@ -1,9 +1,6 @@
-FROM nginx
+FROM node:18-alpine AS builder
 
-WORKDIR /usr/share/weather-maps
-
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs
+WORKDIR /app
 
 COPY . .
 
@@ -11,6 +8,8 @@ RUN npm install
 
 RUN npm run build
 
+FROM nginx
+
 RUN rm -r /usr/share/nginx/html/*
 
-RUN cp -a build/. /usr/share/nginx/html
+COPY --from=builder /app/build/. /usr/share/nginx/html

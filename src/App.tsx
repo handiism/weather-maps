@@ -47,10 +47,6 @@ function App() {
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    document.title = "Weather Maps";
-  }, []);
-
   const handleClose = () => {
     setVisibility({
       open: false,
